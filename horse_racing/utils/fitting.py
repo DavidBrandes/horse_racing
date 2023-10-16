@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.optimize import least_squares
 
-import geometry
+from horse_racing.utils import geometry
 
 
 def fit_vector(points):

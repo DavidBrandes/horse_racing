@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import patches
 
-import geometry
+from horse_racing.utils import geometry
 
                 
 class Circuit:
@@ -122,7 +122,7 @@ class StraightRunIn:
     def length(self):
         return self._length
     
-    def plot(self, ax, solid=True):                        
+    def plot(self, ax, solid=True):
         ax.plot(*zip(self._end_point, self._start_point), 
                 color="grey", linestyle="solid" if solid else "dashed")
     

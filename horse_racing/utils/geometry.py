@@ -82,7 +82,7 @@ def angle(normal, other_normals):
 
 def is_parallel(normal_1, normal_2):
     a = angle(normal_1, normal_2)
-    eps = 1e-8
+    eps = 1e-7
 
     if np.abs(a) > eps and np.abs(a) < np.pi - eps:
         return False
@@ -169,13 +169,3 @@ def circumfence_along_bounded_line(center, normal, lower_bound, upper_bound, wid
     distance[arg_bigger] += upper_bound - lower_bound
                         
     return distance
-
-
-# center = np.array([0, 0])
-# normal = np.array([0, 1])
-# lower_bound = -1
-# upper_bound = 1
-# width = 1
-
-# points = np.array([[1, 0], [1, 2], [0, 2], [-1, 2], [-1, 0], [-1, -2], [0, -2], [1, -2]])
-# circumfence_along_bounded_line(center, normal, lower_bound, upper_bound, width, points)

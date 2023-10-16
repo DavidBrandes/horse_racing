@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-from track import RaceTrack
+from horse_racing.track.track import RaceTrack
 
 
 track_dir_path = "./track_data/AQU"
@@ -39,8 +39,7 @@ for program_number in data["program_number"].unique():
     
     
 trajectories = np.array(trajectories)
-# trajectories = trajectories[:, ::-1]
-trajectories = trajectories[0]
-race_track = RaceTrack.from_directory(track_dir_path)
 
-race_track.plot_race(trajectories, "main", "D", "D", colorize_by="distance")
+race_track = RaceTrack.from_directory(track_dir_path)
+race_track.plot_track()
+# race_track.plot_race(trajectories, "D", run_in_id="D", colorize_by="curvature")
